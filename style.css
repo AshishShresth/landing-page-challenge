@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+:root {
+  --clr-white: 0, 0%, 100%;
+  --clr-black: 0, 0%, 0%;
+  --clr-dark-grey: 0, 0%, 55%;
+  --clr-very-dark-grey: 0, 0%, 41%;
+
+  --ff-primary: 'Josefin Sans', sans-serif;
+  --ff-secondary: 'Alata', sans-serif;
+
+  --lg-dark: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  --lg-light: linear-gradient(
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.7)
+  );
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ff-secondary);
+  line-height: 1.8;
+  color: hsl(var(--clr-dark-grey));
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  font-family: var(--ff-primary);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+header {
+  padding: 2.5em 0;
+  text-align: left;
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+}
+
+.container {
+  width: min(85%, 1200px);
+  margin: 0 auto;
+
+  position: relative;
+}
+
+.nav-toggle {
+  cursor: pointer;
+  border: 0;
+  width: 3em;
+  height: 3em;
+  padding: 0;
+  /* border-radius: 50%; */
+  background: none;
+  color: #fff;
+  transition: opacity 250ms ease;
+
+  position: absolute;
+  right: 0;
+}
+
+.nav-toggle:hover,
+.nav-toggle:focus {
+  opacity: 0.75;
+}
+
+.hamburger {
+  width: 50%;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  margin: 0 auto;
+  height: 3px;
+  background: #fff;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  width: 100%;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+.nav {
+  width: 100%;
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+  font-size: 1em;
+}
+
+.nav--visible {
+  visibility: visible;
+  position: relative;
+  height: auto;
+  margin: 10.5em 0;
+  transition: ease-in-out 1s;
+
+  /* height: calc(100vh - 115px);
+  display: flex;
+  align-items: center; */
+}
+.header--dark {
+  background: hsl(var(--clr-black));
+}
+
+.nav__list {
+  list-style: none;
+}
+
+.nav__link {
+  text-decoration: none;
+  font-family: var(--ff-primary);
+  text-transform: uppercase;
+  color: hsl(var(--clr-white));
+  font-size: 1.5rem;
+}
+
+.nav__item {
+  margin-top: 2em;
+}
+
+.hero {
+  background-image: url(images/mobile/image-hero.jpg);
+  display: flex;
+  align-items: center;
+  /* height: 100vh; */
+  padding: 15em 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero__title {
+  color: hsl(var(--clr-white));
+  font-size: 1.6rem;
+  padding: 1em 1em;
+  border: 1px solid #fff;
+}
+
+.section-two {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.section-title {
+  color: hsl(var(--clr-black));
+  margin: 2rem 0 0.8rem 0;
+  text-align: center;
+}
+
+.section-three {
+  margin-top: 5rem;
+}
+
+.creation {
+  margin-top: 2rem;
+  padding: 4em 0 1em 1em;
+  text-align: left;
+  /* for background images */
+  background-position: center;
+  background-size: cover;
+  color: hsl(var(--clr-white));
+}
+
+.creation:hover {
+  color: hsl(var(--clr-black));
+  transition: ease-in-out 0.5s;
+}
+
+.creation:nth-child(1) {
+  background-image: var(--lg-dark), url(images/mobile/image-deep-earth.jpg);
+}
+.creation:nth-child(1):hover {
+  background-image: var(--lg-light), url(images/mobile/image-deep-earth.jpg);
+  transition: ease-in-out 0.5s;
+}
+
+.creation:nth-child(2) {
+  background-image: var(--lg-dark), url(images/mobile/image-night-arcade.jpg);
+}
+.creation:nth-child(2):hover {
+  background-image: var(--lg-light), url(images/mobile/image-night-arcade.jpg);
+  transition: ease-in-out 0.2s;
+}
+
+.creation:nth-child(3) {
+  background-image: var(--lg-dark), url(images/mobile/image-soccer-team.jpg);
+}
+.creation:nth-child(3):hover {
+  background-image: var(--lg-light), url(images/mobile/image-soccer-team.jpg);
+  transition: ease-in-out 0.5s;
+}
+
+.creation:nth-child(4) {
+  background-image: var(--lg-dark), url(images/mobile/image-grid.jpg);
+}
+.creation:nth-child(4):hover {
+  background-image: var(--lg-light), url(images/mobile/image-grid.jpg);
+  transition: ease-in-out 0.5s;
+}
+
+.creation:nth-child(5) {
+  background-image: var(--lg-dark), url(images/mobile/image-from-above.jpg);
+}
+.creation:nth-child(5):hover {
+  background-image: var(--lg-light), url(images/mobile/image-from-above.jpg);
+  transition: ease-in-out 0.5s;
+}
+
+.creation:nth-child(6) {
+  background-image: var(--lg-dark), url(images/mobile/image-pocket-borealis.jpg);
+}
+.creation:nth-child(6):hover {
+  background-image: var(--lg-light),
+    url(images/mobile/image-pocket-borealis.jpg);
+  transition: ease-in-out 0.5s;
+}
+
+.creation:nth-child(7) {
+  background-image: var(--lg-dark), url(images/mobile/image-curiosity.jpg);
+}
+.creation:nth-child(7):hover {
+  background-image: var(--lg-light), url(images/mobile/image-curiosity.jpg);
+  transition: ease-in-out 0.5s;
+}
+
+.creation:nth-child(8) {
+  background-image: var(--lg-dark), url(images/mobile/image-fisheye.jpg);
+}
+.creation:nth-child(8):hover {
+  background-image: var(--lg-light), url(images/mobile/image-fisheye.jpg);
+  transition: ease-in-out 0.5s;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: var(--ff-primary);
+  border: 1px solid black;
+  color: hsl(var(--clr-black));
+  padding: 0.3em 2em;
+}
+
+.btn:hover {
+  color: hsl(var(--clr-white));
+  background-color: hsl(var(--clr-black));
+  transition: ease-in-out 0.5s;
+}
