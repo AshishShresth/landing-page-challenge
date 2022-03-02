@@ -67,7 +67,7 @@ header {
   cursor: pointer;
   border: 0;
   width: 3em;
-  height: 3em;
+  height: 2em;
   padding: 0;
   /* border-radius: 50%; */
   background: none;
@@ -84,7 +84,7 @@ header {
 }
 
 .hamburger {
-  width: 50%;
+  width: 60%;
   position: relative;
 }
 
@@ -95,6 +95,7 @@ header {
   margin: 0 auto;
   height: 3px;
   background: #fff;
+  border-radius: 50px;
 }
 
 .hamburger::before,
@@ -110,24 +111,25 @@ header {
   transform: translateY(3px);
 }
 
+.logo {
+  max-width: 45%;
+  display: block;
+}
+
 .nav {
   width: 100%;
   visibility: hidden;
   height: 0;
   position: absolute;
   font-size: 1em;
+  display: grid;
+  align-items: center;
 }
 
 .nav--visible {
   visibility: visible;
   position: relative;
-  height: auto;
-  margin: 10.5em 0;
-  transition: ease-in-out 1s;
-
-  /* height: calc(100vh - 115px);
-  display: flex;
-  align-items: center; */
+  min-height: calc(100vh - 6.25em);
 }
 .header--dark {
   background: hsl(var(--clr-black));
@@ -146,15 +148,15 @@ header {
 }
 
 .nav__item {
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 .hero {
   background-image: url(images/mobile/image-hero.jpg);
   display: flex;
   align-items: center;
-  /* height: 100vh; */
-  padding: 15em 0;
+  height: 100vh;
+  /* padding: 16em 0; */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
