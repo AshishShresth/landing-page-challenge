@@ -49,11 +49,11 @@ h2 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 header {
@@ -164,7 +164,7 @@ a {
 }
 
 .hero {
-  background-image: url(images/mobile/image-hero.jpg);
+  background-image: var(--lg-dark), url(images/mobile/image-hero.jpg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -177,11 +177,13 @@ a {
 .hero__title {
   color: hsl(var(--clr-white));
   padding: 1em 1em;
-  border: 1px solid #fff;
+  border: 3px solid #fff;
+}
+.main {
+  margin: 6rem 0;
 }
 
 .section-two {
-  margin-top: 5rem;
   text-align: center;
 }
 
@@ -197,7 +199,7 @@ a {
 }
 
 .section-three {
-  margin: 5rem 0;
+  margin-top: 5rem;
 }
 
 .creation-grid {
@@ -314,7 +316,7 @@ a {
 
 .footer {
   background-color: hsl(var(--clr-black));
-  padding: 4rem 0;
+  padding: 3rem 0;
   text-align: center;
 }
 
@@ -415,7 +417,7 @@ a {
   }
 
   .hero {
-    background-image: url(images/desktop/image-hero.jpg);
+    background-image: var(--lg-dark), url(images/desktop/image-hero.jpg);
   }
 
   .hero__title {
@@ -443,13 +445,10 @@ a {
     margin: 0 0 0.5em 0;
   }
 
-  .section-three {
-    margin-top: 8rem;
-  }
   .section-three__title {
     display: flex;
     align-items: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 4.5rem;
   }
   .top-btn {
     display: flex;
@@ -460,7 +459,11 @@ a {
     border: 1px solid black;
     color: hsl(var(--clr-black));
     padding: 0.3em 2em;
-    margin-bottom: 2.5rem;
+    margin-bottom: 4.5rem;
+  }
+
+  .section-three {
+    margin-top: 8rem;
   }
 
   .bottom-btn {
@@ -587,7 +590,7 @@ a {
     font-size: 5rem;
   }
   h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .hero__title {
@@ -598,6 +601,10 @@ a {
   .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .main {
+    margin: 10rem 0;
   }
 
   .section-two__img,
@@ -619,13 +626,15 @@ a {
   .section-two__title {
     margin: 0 0 0.5em 0;
   }
-
+  .section-three {
+    margin-top: 10rem;
+  }
   .creation-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 
   .creation {
-    padding: 22em 0 1.5em 1.5em;
+    padding: 25em 0 1.5em 1.5em;
   }
 
   .creation-title {
